@@ -23,6 +23,16 @@ setSecondsTimeout(function () {
 }, 1.4); // should print 'world' after 1400 milliseconds
 ***********************************************************************/
 
+function setSecondsTimeout(cb, delay){
+    let seconds = delay * 1000;
+    return setTimeout(cb, seconds);
+  
+    }
+  
+
+setSecondsTimeout(function () {
+  console.log('hello');
+}, 1); // should print 'hello' after 1000 milliseconds
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

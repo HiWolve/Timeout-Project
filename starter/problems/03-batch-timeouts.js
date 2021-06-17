@@ -26,8 +26,26 @@ const timeoutObjs = batchTimeouts(tasks, delays);
 //  'WHAT?' after 900 ms
 
 console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
-***********************************************************************/
 
+Write a function `batchTimeouts` that accepts an array of callbacks and an
+array of delays in milliseconds. The function should set a timeout for each
+callback in the array with its corresponding delay. For example, the
+callback at index 0 should be set with the delay at index 0,
+the callback at index 1 should be set with the delay at index 1, and so on.
+The `batchTimeouts` function should return an array containing the Timeout
+objects for each timeout that was set. You may assume that both array arguments 
+have the same length.
+
+loop through callback array, 
+loop through delay
+use set timeout and put each callback and delay in at that index
+declare empty array and push results of the above function
+***********************************************************************/
+function batchTimeouts(...cb, ...delay){
+  let res = [];
+  
+
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
