@@ -22,7 +22,7 @@ function intervalCount(cb, delay, amt) {
 
   let counter = 0;
 
-  let repeat = setInterval( function(){
+  let repeat = setInterval(function () {
     counter++;
     cb();
   if (counter === amt) {
