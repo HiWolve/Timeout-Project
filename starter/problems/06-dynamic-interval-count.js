@@ -36,11 +36,11 @@ function dynamicIntervalCount(cb, delay, arg) {
   let counter = 0;
 
   if (arg === undefined) {
-    let infinite = setInterval(function () {
-      return setTimeout(cb, delay);
-    })
+    return console.setInterval(cb, delay);
+    // return setTimeout(cb, delay);
+  }
 
-  } else {
+  else {
     let repeat = setInterval(function () {
       cb();
       counter++;
@@ -53,9 +53,9 @@ function dynamicIntervalCount(cb, delay, arg) {
 
 }
 
-dynamicIntervalCount(function() {
-  console.log('hi');
-}, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
+// dynamicIntervalCount(function () {
+//   console.log('hi');
+// }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 
 
 //const timeoutObject = dynamicIntervalCount(function() {
