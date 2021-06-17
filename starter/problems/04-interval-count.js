@@ -20,15 +20,25 @@ setInterval(cb, delay, amount)
 ***********************************************************************/
 function intervalCount(cb, delay, amt) {
 
-    let counter = 0;
+  let counter = 0;
 
-    while (counter < amt) {
-      setInterval(cb, delay)
-      counter++;
-    }
+  let repeat = setInterval( function(){
+    counter++;
+    cb();
+  if (counter === amt) {
+    clearInterval(repeat);
+  }
 
+
+
+}, delay);
 }
 
+// intervalCount(function () {
+//   console.log('hi');
+// }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
+// cb, delay, amount
+// setInterval(cb, delay, amount)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
